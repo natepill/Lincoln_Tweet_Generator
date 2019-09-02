@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    """ Render page with Markov generated tweet """
     generated_tweet = generate_lincoln_tweet('lincoln-speeches.txt')
     return render_template('startbootstrap-freelancer/index.html', generated_tweet=generated_tweet)
 
