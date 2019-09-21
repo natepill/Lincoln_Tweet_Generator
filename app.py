@@ -3,6 +3,7 @@ from markov import MarkovChain, generate_lincoln_tweet
 
 app = Flask(__name__)
 
+""" NOTE: I dont have enough data for to generate UNIQUE quotes by lincoln, I need book text """
 
 # Art of War
 # Confusious text
@@ -13,7 +14,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """ Render page with Markov generated tweet """
-    generated_tweet = generate_lincoln_tweet('lincoln-speeches.txt')
+    generated_tweet = generate_lincoln_tweet('Harry_Potter_ALL_TEXT.txt')
     return render_template('startbootstrap-freelancer/index.html', generated_tweet=generated_tweet)
 
 
