@@ -15,16 +15,6 @@ The web app should quickly generate sentences.
 """
 
 
-"""
-TODO:
-Dale Carniege or desired text
-Random Walk to generate senteces ---> Generating Start and Stop tokens for text
-Use pickle to cache
-Web app interface
-
-"""
-
-
 class MarkovChain:
 
     def __init__(self, filename):
@@ -129,7 +119,6 @@ class MarkovChain:
             for key, value in dictionary.items():
                 if key == current_token:
 
-                    #
                     # sample from histogram of values
                     cumulative = sample.cumulative_distribution(value)
                     sample_word = sample.sample(cumulative)
@@ -162,27 +151,6 @@ def generate_lincoln_tweet(filename):
     print(markov_sentence)
     return markov_sentence
 
-    # def generate_sentence(self, dict):
-    #
-    #     #TODO: Need to refactor to implemented start and stop tokens
-    #     """Taking a random word, and generating a sentence
-    #     with the next 20 words based off the start of the chain."""
-    #
-    #     sentence = ""
-    #     list_of_keys = list(dict.keys())
-    #     index = random.randint(0, len(list_of_keys)-1)
-    #     chosen_word = list_of_keys[index]
-    #     sentence = sentence + chosen_word
-    #
-    #     for _ in range(0,20):
-    #         dictogram = dict.get(chosen_word)
-    #         print(dictogram)
-    #         new_word = random_word(self, dictogram)
-    #         sentence = sentence +" "+ new_word
-    #         chosen_word = new_word
-    #
-    #     print(sentence)
-    #     return sentence
 
 
 if __name__ == '__main__':
