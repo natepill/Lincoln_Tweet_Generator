@@ -15,7 +15,7 @@ app = Flask(__name__)
 def index():
     """ Render page with Markov generated tweet """
     generated_tweet = generate_lincoln_tweet('Harry_Potter_ALL_TEXT.txt')
-    return render_template('startbootstrap-freelancer/index.html', generated_tweet=generated_tweet)
+    return render_template('templates/startbootstrap-freelancer/index.html', generated_tweet=generated_tweet)
 
 
 
