@@ -3,8 +3,6 @@ from markov import MarkovChain, generate_lincoln_tweet
 
 app = Flask(__name__)
 
-""" NOTE: I dont have enough data for to generate UNIQUE quotes by lincoln, I need book text """
-
 # Art of War
 # Confusious text
 # How to Win Friends or Influence People
