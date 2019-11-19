@@ -14,9 +14,15 @@
        - checkout
        - run: echo "A more familiar hi"
        - run: sleep 15
+    three:
+     docker:
+       - image: circleci/python
+       - run: python test.py
+
  workflows:
    version: 2
    one_and_two:
      jobs:
        - one
        - two
+       - three
